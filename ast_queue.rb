@@ -7,13 +7,13 @@ module Sakura
     
     def push(ast)
       ast_queue.unshift(ast)
-      @index += 1 #why can't I use :index?
+      @index += 1
     end
 
     def pop
       ast = ast_queue.at(index - 1)
       ast_queue[index - 1] = nil
-      @index -= 1 unless @index == 0#why can't I use :index?
+      @index -= 1 unless @index == 0
       ast
     end
 
